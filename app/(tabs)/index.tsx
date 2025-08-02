@@ -10,7 +10,11 @@ import { ActivityIndicator, FlatList, Image, Text, View } from "react-native";
 export default function Index() {
   const router = useRouter();
 
-  const { data: movies, loading: moviesLoading, error: moviesError } = useFetch(() => fetchMovies({ query: "" }), true);
+  const { 
+    data: movies, loading: moviesLoading, error: moviesError 
+  } = useFetch(() => fetchMovies({ 
+    query: "" 
+  }));
 
   return (
     <View className="flex-1 bg-primary">

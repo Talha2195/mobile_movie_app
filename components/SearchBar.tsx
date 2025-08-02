@@ -6,7 +6,7 @@ interface Props {
   placeholder: string;
   value?: string;
   onChangeText?: (text: string) => void;
-  onPress?: () => void;
+  onPress?: (text:string) => void;
 }
 
 const SearchBar = ({ placeholder, value, onChangeText, onPress }: Props) => {
@@ -21,8 +21,8 @@ const SearchBar = ({ placeholder, value, onChangeText, onPress }: Props) => {
       <TextInput
         onPress={onPress}
         placeholder={placeholder}
-        value=""
-        onChangeText={() => {}}
+        value={value}
+        onChangeText={onChangeText}
         className="flex-1 ml-2 text-white"
         placeholderTextColor="#A8B5DB"
       />
